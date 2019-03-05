@@ -25,5 +25,11 @@ namespace testing12.Controllers
             ViewData["abcTest"] = abc;
             return View();
         }
+        public ActionResult Test1()
+        {
+            var abc = "test";
+            ViewData["abcTest"] = abc;
+            return View();
+        }
     }
 }
