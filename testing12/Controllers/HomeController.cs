@@ -14,9 +14,15 @@ namespace testing12.Controllers
             var mvcName = typeof(Controller).Assembly.GetName();
             var isMono = Type.GetType("Mono.Runtime") != null;
 
-            ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            ViewData["Runtime"] = isMono ? "Mono123" : ".NET";
-
+            ViewData["Verson"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
+            ViewData["Rutime"] = isMono ? "Mono123" : ".NET";
+            ViewData["abc"] = "Test";
+            return View();
+        }
+        public ActionResult Test()
+        {
+            var abc = "test";
+            ViewData["abcTest"] = abc;
             return View();
         }
     }
